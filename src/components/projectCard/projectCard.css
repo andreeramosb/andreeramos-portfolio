@@ -1,0 +1,151 @@
+.project-card {
+    background-color: #1a202c;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 100%;
+    max-width: 380px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #e2e8f0;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #63b3ed;
+    text-align: center;
+    margin-bottom: 12px;
+    word-break: break-word;
+    line-height: 1.3;
+}
+
+.tipo {
+    font-size: 1.05rem;
+    color: #a0aec0;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    max-height: 80px;
+    overflow-y: hidden;
+    text-align: justify;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.tec-tag {
+    background-color: #2d3748;
+    color: #bee3f8;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center; /* Asegura que los enlaces se centren horizontalmente */
+    gap: 15px;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    background-color: #4299e1;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-weight: 600;
+    text-align: center;
+    flex-basis: calc(50% - 10px);
+    box-sizing: border-box;
+    min-width: 120px;
+    font-size: 1.05rem;
+}
+
+.project-links a:hover {
+    background-color: #3182ce;
+    transform: translateY(-2px);
+}
+
+.project-links a:only-child {
+    max-width: 200px;
+    flex-basis: auto; /* Permite que el único botón tome su ancho natural */
+    margin: 0 auto; /* Centra el botón si es el único y se le da un max-width */
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        min-height: 280px;
+    }
+    .project-info h3 {
+        font-size: 1.5em;
+    }
+    .tipo {
+        font-size: 0.95rem;
+        max-height: 60px;
+    }
+    .tecnologias {
+        gap: 6px;
+    }
+    .tec-tag {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+    .project-links a {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        min-height: 260px;
+    }
+    .project-info h3 {
+        font-size: 1.4em;
+    }
+    .tipo {
+        font-size: 0.9rem;
+    }
+    .tecnologias {
+        gap: 5px;
+    }
+    .tec-tag {
+        font-size: 0.75em;
+    }
+    .project-links a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,110 @@
+/* src/components/banner/banner.css */
+
+.banner-container{
+    background-image: url("https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.banner-container:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+    height: 100vh;
+}
+
+.banner-content{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 48px; /* De 40px a 48px para un mayor impacto */
+    line-height: 1.2; /* Ajustar línea de altura para espacios entre líneas */
+}
+
+.banner-content p {
+    margin-bottom: 0.5rem; /* Un pequeño espacio entre líneas para mejor separación */
+    font-weight: 700;
+}
+
+.rol{
+    background-color: #FF0000;
+    font-size: 26px; /* De 20px a 26px */
+    padding: 0.3rem 0.8rem; /* Ajustar padding */
+    line-height: 1.2;
+}
+
+.btn-container{
+    padding: 25px 30px; /* Ligeramente más padding */
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    padding: 1.1rem 36px; /* Más padding */
+    font-size: 1.1rem; /* De 1rem a 1.1rem */
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    background-color: #F74D00;
+}
+
+.btn-light{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #FF0000;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+/* --- Responsividad para Banner --- */
+@media screen and (max-width: 768px) {
+    .banner-content {
+        font-size: 38px; /* Ajustar para tablets */
+    }
+    .rol {
+        font-size: 22px;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 1rem 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-content {
+        font-size: 30px; /* Ajustar para móviles pequeños */
+    }
+    .banner-content p {
+        margin-bottom: 0.3rem; /* Menos espacio entre líneas en móviles */
+    }
+    .rol {
+        font-size: 18px;
+        padding: 0.2rem 0.6rem;
+    }
+    .btn-container {
+        flex-direction: column; /* Apilar botones en móviles */
+        gap: 10px; /* Espacio entre botones apilados */
+    }
+    .btn {
+        width: 80%; /* Asegurar que los botones ocupen un buen ancho */
+        max-width: 250px;
+        font-size: 0.95rem;
+        padding: 0.9rem 20px;
+    }
+}

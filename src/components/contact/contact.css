@@ -1,0 +1,202 @@
+.contact-section-container {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - var(--navbar-height));
+    justify-content: center;
+}
+
+.contact-title {
+    color: #fff;
+    background-color: #ff0000;
+    width: 30rem;
+    font-size: 2.6em;
+    margin-bottom: 3rem;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #bee3f8;
+    font-weight: 500;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.5;
+}
+
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3);
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 1rem 1.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    align-self: center;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: transparent;
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.submit-btn:disabled {
+    background-color: #4a5568;
+    color: #cbd5e0;
+    cursor: not-allowed;
+    border-color: #4a5568;
+}
+
+.form-error {
+    color: #fc8181;
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    padding-left: 0.5rem;
+}
+
+.form-status {
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #48bb78;
+    color: #2d3748;
+}
+
+.initial-message {
+    background-color: #ecc94b;
+    color: #2d3748;
+}
+
+.error-message {
+    background-color: #e53e3e;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .contact-section-container {
+        padding: 4rem 1.5rem;
+    }
+
+    .contact-title {
+        font-size: 2.6em;
+        margin-bottom: 2.5rem;
+        width: 15rem;
+        text-align: left;
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .form-wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-form label {
+        font-size: 1.1rem;
+    }
+
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .submit-btn {
+        max-width: 100%;
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .form-status {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section-container {
+        padding: 3rem 1rem;
+    }
+    .contact-title {
+        font-size: 2.2em;
+        width: 12rem;
+        text-align: left;
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .form-wrapper {
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+    }
+    .contact-form label {
+        font-size: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .submit-btn {
+        font-size: 0.95rem;
+        padding: 0.7rem 1rem;
+    }
+    .form-status {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}

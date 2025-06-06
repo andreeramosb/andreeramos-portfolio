@@ -1,0 +1,36 @@
+.card-container{
+    background-color: #22213D;
+    padding: 1rem;
+}
+
+.header-card{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+    text-decoration: underline;
+    color: #EAEAEA
+}
+
+.card-container section{
+    margin-bottom: 1rem;
+}
+
+.btn-card{
+    padding: 0.4rem 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+
+.btn-card:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
